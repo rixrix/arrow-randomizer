@@ -46,6 +46,7 @@
           </div>
 
           <div class="inner cover">
+            <h1 class="cover-heading">Tap or Click</h1>
             <p class="lead">
               <span class="arrow left glyphicon glyphicon-arrow-left"></span>
               <span class="arrow right glyphicon glyphicon-arrow-right"></span>
@@ -132,6 +133,7 @@
 
             $(document).on('touchstart click', function(event) {
                 var currentArrow = generateRandomArrow();
+                $('.cover-heading').hide();
                 $('.glyphicon-arrow-left').toggleClass('left', currentArrow == 'left').attr('style', '').delay(500).fadeOut('slow');
                 $('.glyphicon-arrow-right').toggleClass('right', currentArrow == 'right').attr('style', '').delay(500).fadeOut('slow');
             });
